@@ -3,7 +3,7 @@
 context('Paytm Insider Test suite',() => {
     beforeEach(()=> {
         cy.viewport(1500,1200)
-        cy.clearCookies()
+        //cy.clearCookies()
         cy.visit('https://insider.in/')
         cy.url().should('eq','https://insider.in/')
     })
@@ -37,6 +37,10 @@ context('Paytm Insider Test suite',() => {
         //Verify the url after buying the ticket
         cy.url().should('eq','https://insider.in/buy/checkout')
 
+    })
+
+    afterEach(()=> {
+        cy.clearCookies()
     })
 
 })
