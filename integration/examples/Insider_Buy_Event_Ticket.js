@@ -10,13 +10,16 @@ context('Paytm Insider Test suite',() => {
 
     it('Events ticket purchase scenario',() => {
         //Click on 'Pune' from City-list
-        cy.get('.city-list > :nth-child(7) > a').click()
-
+        //cy.get('.city-list > :nth-child(7) > a').click()
+        console.log('City List: ')
+        cy.get('.city-list').contains('Pune').click()
+   
         //Assert url contains '/pune'
         cy.url().should('include','https://insider.in/pune')
 
         //Click on first element of 'Featured Event' category
-        cy.get('.card-list .carousel-item-0 .featured-card>a').click()
+        //cy.get('.card-list .carousel-item-0 .featured-card > a').click()
+        cy.get('.featured-card-name').contains('Bacardi NH7 Weekender 2019, Pune').click()
 
         //Assert url of the clicked event
         cy.url().should('include','/event')

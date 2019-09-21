@@ -16,8 +16,10 @@ describe('Paytm Insider Test suite',() => {
 
         //Navigate to the desired category i.e. Browse events by genres
         cy.get('.card-list-wrapper.category-wrapper .card-list-head span').scrollIntoView()
+
         //Click on the see more button of the above specified category
         cy.get('.accordion-title').contains('Show more').click()
+        
         //.each() : to count each element under the defined class
         let ele_count=0 
           cy.get('.category-card').each(() =>{
