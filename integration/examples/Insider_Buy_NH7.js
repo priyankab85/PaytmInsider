@@ -12,7 +12,7 @@ describe('Paytm Insider Test suite',() => {
         cy.get('.city-list').contains('Pune').click()
 
         //Assert url contains '/pune'
-        cy.url().should('include','https://insider.in/pune')
+        cy.url().should('include','/pune')
 
         //Navigate to the desired category i.e. Browse events by genres
         cy.get('.card-list-wrapper.category-wrapper .card-list-head span').scrollIntoView()
