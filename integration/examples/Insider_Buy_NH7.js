@@ -27,8 +27,8 @@ describe('Paytm Insider Test suite',() => {
             console.log(ele_count)
             })
         //Get the last element count by using .last()  
-            cy.get('.category-card').last().then(()=>{
-              //command to display on Cypress UI Test runner's log  
+          cy.get('.category-card').last().then(()=>{
+             //command to display on Cypress UI Test runner's log  
              cy.log('Count of elements is',ele_count)
         })
 
